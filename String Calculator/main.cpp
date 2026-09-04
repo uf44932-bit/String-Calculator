@@ -23,30 +23,33 @@ int string_calculator(string str) {
         size_t end = str.find_first_of(delimiters, start);
         
         string number = str.substr(start, end-start);
+        
+        if (!number.empty()) {
+            sum += stoi(number);
+            
+        }
+        
+        if(end == string::npos) {
+            break;
+        }
+        
+        start = end + 1;
+        
     }
        
-    
-    
-    
-    
-    
-        
     
     return sum;
 }
     
-    
-
 
 
 
 int main()
 
 {
-    assert(string_calculator(" ") == 0);
-    assert(string_calculator("1,2,3") == 6);
-    assert(string_calculator("1;2") == 3);
-    
+    assert(string_calculator("") == 0);
+    assert(string_calculator("1,2") == 3);
+    assert(string_calculator("1,2,2") == 5);
     cout << "everyting passed!";
     
     
