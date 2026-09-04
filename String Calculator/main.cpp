@@ -15,20 +15,22 @@ int string_calculator(string str) {
     }
     
     int sum = 0;
-    stringstream ss(str);
-    string number;
+    size_t start = 0;
     
-    while (getline(ss, number, ',')){
-        stringstream sub_ss(number);
-        string ss_number;
+    string delimiters = ",;";
         
-        while (getline(sub_ss, ss_number, ';')) {
-            if(ss_number.empty()){
-                sum +=stoi(ss_number);
-            }
-        }
+    while (start < str.size()) {
+        size_t end = str.find_first_of(delimiters, start);
+        
+        string number = str.substr(start, end-start);
     }
+       
     
+    
+    
+    
+    
+        
     
     return sum;
 }
