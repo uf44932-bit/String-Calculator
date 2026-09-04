@@ -50,7 +50,9 @@ int main()
     assert(string_calculator("") == 0);
     assert(string_calculator("1,2") == 3);
     assert(string_calculator("1,2,2") == 5);
-    cout << "everyting passed!";
+    assert(string_calculator("1") == 1);
+    
+    cout << "everyting passed!\n\n";
     
     
     return EXIT_SUCCESS;
