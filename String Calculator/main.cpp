@@ -1,14 +1,38 @@
-//
-//  main.cpp
-//  String Calculator
-//
-//  Created by Anahi Munoz on 9/3/26.
-//
 
 #include <iostream>
+#include <string>
+#include <cassert>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+
+using namespace std;
+
+
+int string_calculator(string str) {
+    
+    if (str.empty()) {
+        return 0;
+    }
+    
+    int sum = 0;
+   
+    
+    
+    
+    return sum;
+}
+    
+    
+
+
+
+
+int main()
+
+{
+  
+    
+    
+    
+    
     return EXIT_SUCCESS;
 }
